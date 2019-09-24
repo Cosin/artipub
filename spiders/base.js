@@ -98,7 +98,7 @@ class BaseSpider {
 
     // 脚注内容
     this.footerContent = {
-      richText: `<br><b>本篇文章由一文多发平台<a href="https://github.com/crawlab-team/artipub" target="_blank">ArtiPub</a>自动发布</b>`,
+      richText: `<br><b>本文最先发表于个人网站<a href="https://sssis.me" target="_blank">「花墨世界」</a></b><br><br><b>关注公众号查看我的更多文章：花墨世界</b><br><img src="https://s2.ax1x.com/2019/09/24/uA8qKI.png">`,
     }
   }
 
@@ -224,7 +224,7 @@ class BaseSpider {
   }
 
   async inputFooter(article, editorSel) {
-    const footerContent = `\n\n> 本篇文章由一文多发平台[ArtiPub](https://github.com/crawlab-team/artipub)自动发布`
+    const footerContent = `\n\n> 本文最先发表于个人网站[「花墨世界」](https://sssis.me) \n\n> 关注公众号查看我的更多文章：花墨世界 \n\n![](https://s2.ax1x.com/2019/09/24/uA8qKI.png)`
     const el = document.querySelector(editorSel.content)
     el.focus()
     document.execCommand('insertText', false, footerContent)
