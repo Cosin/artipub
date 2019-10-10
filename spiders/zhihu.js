@@ -12,7 +12,7 @@ class ZhihuSpider extends BaseSpider {
     }
 
     // 内容
-    const content = this.article.content + `\n\n> 本文最先发表于个人网站[「花墨世界」](https://sssis.me) \n\n> 关注公众号查看我的更多文章：花墨世界 \n\n![](https://s2.ax1x.com/2019/09/24/uA8qKI.png)`
+    const content = this.article.content + `\n\n> 本文最先发表于个人网站[「花墨世界」](https://sssis.me) \n\n> 关注公众号查看我的更多文章：花墨世界 \n\n![](http://wx4.sinaimg.cn/mw690/0060lm7Tly1fyumis9goej30go0go0ud.jpg)`
 
     // 写入临时markdown文件
     const mdPath = path.join(dirPath, `${this.article._id.toString()}.md`)
