@@ -3,7 +3,7 @@ const BaseSpider = require('./base')
 class CnblogsSpider extends BaseSpider {
 
   async inputContent(article, editorSel) {
-    const footerContent = `<br><b>本文最先发表于个人网站<a href="https://sssis.me" target="_blank">「花墨世界」</a></b><br><br><b>关注公众号查看我的更多文章：花墨世界</b><br><img src="https://s2.ax1x.com/2019/09/24/uA8qKI.png">`
+    const footerContent = `<br><b>本文最先发表于个人网站<a href="https://sssis.me" target="_blank">「花墨世界」</a></b><br><br><b>关注公众号查看我的更多文章：花墨世界</b><br><img src="http://wx4.sinaimg.cn/mw690/0060lm7Tly1fyumis9goej30go0go0ud.jpg">`
     const content = article.contentHtml + footerContent;
     const iframeWindow = document.querySelector('#Editor_Edit_EditorBody_ifr').contentWindow
     const el = iframeWindow.document.querySelector(editorSel.content)
